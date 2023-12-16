@@ -12,7 +12,7 @@ export default {
         bombay: "#aeaeae" /* light gray */,
         orangeRed: "#ff4600" /* red / error */,
         cognac: "#9a360e" /* dark red */,
-        fireEngineRed: "#c52425" /* dark red */,
+        fireEngineRed: "#c52425" /* darker red */,
         silverTree: "#70bd91" /* light green */,
         turquoiseGreen: "#a0ccb7" /* very light green */,
         spanishGreen: "#008a52" /* medium green */,
