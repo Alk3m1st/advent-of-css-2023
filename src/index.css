@@ -5,6 +5,14 @@
 @tailwind utilities;
 
 @layer base {
+  main {
+    @apply z-10 relative mb-[350px] overflow-scroll;
+  }
+
+  main::-webkit-scrollbar {
+    @apply hidden;
+  }
+
   label {
     @apply font-handwriting uppercase text-xl tracking-tighter;
   }
@@ -14,7 +22,7 @@
   }
 
   label:has(+ input:focus),
-    label:has(+ input) {
+  label:has(+ input) {
     @apply absolute top-2 left-2 text-xl;
   }
 
@@ -24,7 +32,7 @@
   input[type="number"],
   input[type="tel"],
   input[type="email"] {
-      @apply font-sans text-2xl h-[100px] w-full px-7 border-black border-2;
+    @apply font-sans text-2xl h-[100px] w-full px-7 border-black border-2;
   }
 
   /* invalid label */

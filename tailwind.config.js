@@ -3,6 +3,9 @@ export default {
   content: ["src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      backgroundImage: {
+        auth: 'url("/src/assets/login/bg__auth.svg")',
+      },
       borderWidth: {
         avatar: "6px",
       },
