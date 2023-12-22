@@ -6,7 +6,7 @@ type FormFieldProps = {
   name: string;
 };
 
-export const FormField = ({ label, name, ...rest }: FormFieldProps) => {
+export const PasswordFormField = ({ label, name, ...rest }: FormFieldProps) => {
   const [isPasswordShowing, setIsPasswordShowing] = useState(false);
 
   const toggle = () => {
@@ -15,7 +15,7 @@ export const FormField = ({ label, name, ...rest }: FormFieldProps) => {
 
   return (
     <div className="relative">
-      <label htmlFor="password">{label}</label>
+      <label htmlFor={name}>{label}</label>
       <input
         type={isPasswordShowing ? "text" : "password"}
         id={name}
@@ -27,6 +27,22 @@ export const FormField = ({ label, name, ...rest }: FormFieldProps) => {
       <button className="absolute top-8 right-6" onClick={() => toggle()}>
         <Icon id={isPasswordShowing ? "eyeOpened" : "eyeClosed"} size={32} />
       </button>
+    </div>
+  );
+};
+
+export const TextFormField = ({ label, name, ...rest }: FormFieldProps) => {
+  return (
+    <div className="relative">
+      <label htmlFor={name}>{label}</label>
+      <input
+        type="text"
+        id={name}
+        name={name}
+        placeholder=""
+        required
+        {...rest}
+      />
     </div>
   );
 };

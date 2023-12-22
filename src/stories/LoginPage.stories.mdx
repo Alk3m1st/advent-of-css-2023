@@ -1,0 +1,12 @@
+import { Meta, Canvas, Story } from "@storybook/addon-docs";
+import { TextFormField, PasswordFormField } from "../components/FormField";
+
+<Meta title="Styles/Login Page" />
+
+<div class="bg-[url('/src/assets/login/bg__auth.svg')] center w-full h-full">
+  <span class="uppercase">Login</span>
+  <TextFormField label="Username" name="username" />
+  <PasswordFormField label="Password" name="password" />
+  <button class="bg-yellow-400 rounded-full w-32">Submit</button>
+  <a href="#">Need an account</a>
+</div>
